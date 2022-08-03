@@ -4,8 +4,8 @@ public class PlanetDTO {
 
 	private Long id;
 	private String name;
-	private double temperatura;
-	private String tipoPlaneta;
+	private double temp;
+	private String planetType;
 
 	public Long getId() {
 		return id;
@@ -23,20 +23,24 @@ public class PlanetDTO {
 		this.name = name;
 	}
 
-	public double getTemperatura() {
-		return temperatura;
+	public double getTemp() {
+		return temp;
 	}
 
-	public void setTemperatura(double temperatura) {
-		this.temperatura = temperatura;
+	public void setTemp(double temp) {
+		this.temp = temp;
 	}
 
-	public String getTipoPlaneta() {
-		return tipoPlaneta;
+	public String getPlanetType() {
+		return planetType;
 	}
 
-	public void setTipoPlaneta(String tipoPlaneta) {
-		this.tipoPlaneta = tipoPlaneta;
+	public void setPlanetType(String planetType) {
+		this.planetType = planetType;
 	}
+ 
+	
+	
+	
 
 }

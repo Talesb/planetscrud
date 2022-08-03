@@ -14,27 +14,25 @@ public class Planet {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private double temperatura;
-	private String tipoPlaneta;
-	
-	
-	public Planet(Long id, String name, double temperatura, String tipoPlaneta) {
+	private double temp;
+	private String planetType;
+
+	public Planet(Long id, String name, double temp, String planetType) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.temperatura = temperatura;
-		this.tipoPlaneta = tipoPlaneta;
+		this.temp = temp;
+		this.planetType = planetType;
 	}
-	
+
 	public Planet(PlanetDTO dto) {
 		super();
 		this.id = dto.getId();
 		this.name = dto.getName();
-		this.temperatura = dto.getTemperatura();
-		this.tipoPlaneta = dto.getTipoPlaneta();
+		this.temp = dto.getTemp();
+		this.planetType = dto.getPlanetType();
 	}
 
-	
 	public Planet() {
 		super();
 	}
@@ -55,32 +53,29 @@ public class Planet {
 		this.name = name;
 	}
 
-	public double getTemperatura() {
-		return temperatura;
+	public double getTemp() {
+		return temp;
 	}
 
-	public void setTemperatura(double temperatura) {
-		this.temperatura = temperatura;
+	public void setTemp(double temp) {
+		this.temp = temp;
 	}
 
-	public String getTipoPlaneta() {
-		return tipoPlaneta;
+	public String getPlanetType() {
+		return planetType;
 	}
 
-	public void setTipoPlaneta(String tipoPlaneta) {
-		this.tipoPlaneta = tipoPlaneta;
+	public void setPlanetType(String planetType) {
+		this.planetType = planetType;
 	}
 
 	public PlanetDTO toDTO() {
 		PlanetDTO dto = new PlanetDTO();
 		dto.setId(id);
 		dto.setName(name);
-		dto.setTemperatura(temperatura);
-		dto.setTipoPlaneta(tipoPlaneta);
+		dto.setTemp(temp);
+		dto.setPlanetType(planetType);
 		return dto;
 	}
-	
-	
-	 
 
 }
